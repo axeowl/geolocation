@@ -5,6 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 import { HomePage } from './home.page';
+import {RoomComponent} from '../room/room.component';
+import { TextToSpeech } from '@ionic-native/text-to-speech/ngx';
 
 @NgModule({
   imports: [
@@ -18,6 +20,12 @@ import { HomePage } from './home.page';
       }
     ])
   ],
-  declarations: [HomePage]
+  declarations: [
+      HomePage,
+      RoomComponent
+  ],
+  providers: [
+      TextToSpeech
+  ]
 })
 export class HomePageModule {}

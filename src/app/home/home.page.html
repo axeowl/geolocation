@@ -1,34 +1,7 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content padding>
-  <div *ngIf="!beaconData; else beaconFound">
-    <ion-card>
-      <ion-card-header>
-        Start Scan
-      </ion-card-header>
-      <ion-card-content>
-        <p>Click here</p>
-        <ion-button (click)="startScanningForBeacons()"> Start scan</ion-button>
-      </ion-card-content>
-    </ion-card>
-  </div>
-  <ng-template #beaconFound>
-    <ion-card>
-      <ion-card-header>
-        Beacon Found
-      </ion-card-header>
-      <ion-card-content>
-        <ion-list>
-          <ion-item> {{beaconData.address}}</ion-item>
-          <ion-item> {{beaconData.rssi}}</ion-item>
-        </ion-list>
-      </ion-card-content>
-    </ion-card>
-  </ng-template>
-</ion-content>
+<!--<ion-list>-->
+    <!--<ion-item *ngFor="let b of beacons.keys()"> <room></room> </ion-item>-->
+<!--</ion-list>-->
+<!--<room></room>-->
+<ion-button (click)="startScanningForBeacons()"> Start scan</ion-button>
+<ion-button (click)="stopScan()"> Stop scan</ion-button>
+<ion-item> Fra: {{distance}} metri entra nella stanza {{nextHop}}</ion-item>
